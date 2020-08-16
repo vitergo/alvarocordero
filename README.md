@@ -1,2 +1,2 @@
-# eduardocordero
-Dr. Eduardo Cordero subsite within qremonterrey.org
+# alvarocordero
+Dr. Alvaro E. Cordero-Franco's subsite within qremonterrey.org
