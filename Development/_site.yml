@@ -12,13 +12,13 @@ navbar:
       href: consulting_AECF.html
   right:
     - icon: fa-envelope fa-lg
-      href: contact.html
+      href: contact_AECF.html
     - icon: fa-github fa-lg
-      href: https://github.com/zabore
+      href: https://github.com/lalocordero
     - icon: fa-twitter fa-lg
-      href: https://twitter.com/zabormetrics
+      href: https://twitter.com/lalocorderof
     - icon: fa-linkedin fa-lg
-      href: https://www.linkedin.com/in/emily-zabor-59b902b7/
+      href: https://www.linkedin.com/in/alvaro-eduardo-cordero-franco-49a7884b/
 output:
   html_document:
     theme: cerulean
