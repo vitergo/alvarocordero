@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Dr. Alvaro E. Cordero-Franco</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">A.E.C.F.</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://qremonterrey.org/">QREMonterrey</a>
+</li>
+<li>
+  <a href="CV_AECF.html">Resumé</a>
+</li>
+<li>
+  <a href="research_AECF.html">Basic Research</a>
+</li>
+<li>
+  <a href="consulting_AECF.html">Consulting</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/zabore">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/zabormetrics">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/emily-zabor-59b902b7/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Dr. Alvaro E. Cordero-Franco</h1>
+<h3 class="subtitle">Researcher</h3>
+
+</div>
+
+
+<div id="educación" class="section level2">
+<h2>Educación</h2>
+<p>El Dr. Álvaro Eduardo Cordero Franco tiene licenciatura en matemáticas por la Facultad de Ciencias Físico - Matemáticas de la Universidad Autónoma de Nuevo León, doctorado en ciencias de la ingeniería con especialidad en ingeniería industrial en el instituto tecnológico de estudios superiores de Monterrey (ITESM) Campus Monterrey. Ph. D, in Systems and Engineering Management, Texas Tech University, Lubbock, TX.</p>
+<p>Sistema Nacional de Investigadores: Si, SIN I hasta diciembre 2020</p>
+<p>Perfil deseable PROMEP: Si, hasta Julio 2021</p>
+</div>
+<div id="experiencia-docente" class="section level2">
+<h2>Experiencia Docente</h2>
+</div>
+<div id="tesis-dirigidas" class="section level2">
+<h2>Tesis Dirigidas</h2>
+<p>Samuel U. Armendariz Hernández. Hypothesis test for changes in variance using a statistic based in P-values in a time series of normal independent observations. Maestría.</p>
+<p>Armando Ortega Rosales. Los problemas binivel lineales con coeficientes intervalos en los lados derechos de las restricciones del nivel inferior. Maestría.</p>
+<p>Montserrat Delgado Brito. Diseño Económico de la Carta de Control de Tukey Modificada. Mestría.</p>
+<p>María Isabel Salazar Alvarez. A Nonparametric capability analysis incorporating quantile sampling in manufacturing processes. Doctorado.</p>
+<p>Armando Jesús Guerrero Serrano. Aligned-rank transformation methods in nonparametric tests for homoscedasticity. Maestría.</p>
+</div>
+<div id="experiencia-profesional" class="section level2">
+<h2>Experiencia Profesional</h2>
+<p>(Noviembre 2019 -presente), Subdirector de Posgrado de la Facultad de Ciencias Físico Matemáticas, UANL.</p>
+<p>(Julio 2016 - Noviembre 2019), Coordinador de la Licenciatura en Matemáticas en la Facultad de Ciencias Físico Matemáticas, UANL</p>
+<p>(2013 – presente), Instructor del curso de Estadística Aplicada para la Toma de Decisiones y de Control Estadístico de Procesos que se imparte en el Departamento de Educación Continua de la Facultad de Ciencias Físico Matemáticas, UANL.</p>
+<p>(Enero 2010-presente), Profesor Titular A T. C, Facultad de Ciencias Físico Matemáticas, y del centro de Investigación en Ciencias Físico Matemáticas, UANL</p>
+<p>(2007 - 2009), Asistente de Investigación, Cátedra de Investigación en Métodos de Solución de Problemas de Programación Binivel, ITESM, Monterrey, NL</p>
+<p>(2007-2009), Asistente de Investigación, Departamento de Ingeniería Industrial, Texas Tech University, Lubbock, TX. USA</p>
+<p>(2008-2009), Consultor Asistente, Programa Seis Sigma, ITESM, Monterrey, NL</p>
+</div>
+<div id="proyectos-de-investigación" class="section level2">
+<h2>Proyectos de investigación</h2>
+<p>Análisis del punto de cambio en series de tiempo con aplicación en control estadístico de procesos, PAICYT 2011 (Terminado).</p>
+<p>Análisis del punto de cambio en series de tiempo con aplicación en control estadístico de procesos, PROMEP 2011 (Terminado).</p>
+<p>Desarrollo de capacidades tecnológicas para reconstrucción de imágenes 3d para piezas de gran tamaño, que permita su evaluación dimensional mediante el procesamiento, manipulación, inspección y diagnóstico de fallas. Etapa 3. Proyecto CONACYT-PROINNOVA 2012 en colaboración con DEMAQ Technologies y el Tecnológico de Monterrey. (Terminado, Co-responsable técnico).</p>
+<p>Desarrollo de capacidades tecnológicas para reconstrucción de imágenes 3d para piezas de gran tamaño, que permita su evaluación dimensional mediante el procesamiento, manipulación, inspección y diagnóstico de fallas. Etapa 3. Proyecto CONACYT-PROINNOVA 2013 en colaboración con DEMAQ Technologies y el Tecnológico de Monterrey. (Terminado, Co-responsable técnico).</p>
+<p>Sistema de Predicción de Delitos, SPRED. Proyecto de la FCFM con el Municipio de General Escobedo, N.L. 2018. Terminado</p>
+</div>
+<div id="publicaciones" class="section level2">
+<h2>Publicaciones</h2>
+<p>Salazar-Alvarez, M; Tercero Gómez, V.; Temblador-Pérez, M; Cordero-Franco, A.; and Conover, W. (2014). Nonparametric analysis of interactions: a review and gap analysis. Proceedings of the 2014 Industrial and Systems Engineering Research Conference Y. Guan and H. Liao, eds.</p>
+<p>Javier Morales; Víctor Tercero; José-Fernando Camacho-Vallejo; Alvaro E.Cordero; Luis E. López Nerio; F-Javier Almaguer (2016) Trend and fractality assessment of Mexico’s stock exchange, Applied Mathematics and Computation.</p>
+<p>María I. Salazar-Alvarez; Carmen Temblador-Pérez; William J. Conover; Víctor G. Tercero-Gómez; Alvaro E. Cordero-Franco; Mario G. Beruvides (2016) Regressing sample quantiles to perform nonparametric capability analysis, International Journal of Advanced Manufacturing Technology.</p>
+<p>Barraza-Barraza, D., Tercero-Gómez, V. G., Beruvides, M. G., &amp; Cordero-Franco, A. E. (2017). Remarks on estimating the remaining useful life of an asset in the presence of condition variable changes. In IIE Annual Conference. Proceedings (pp. 1613-1618). Institute of Industrial and Systems Engineers (IISE).</p>
+<p>W. J. Conover; Víctor G. Tercero-Gómez; Alvaro E. Cordero-Franco (2017) The sequential normal scores transformation, Sequential Analysis.</p>
+<p>Jorge Garza-Venegas; Victor Tercero-Gomez; Alvaro Cordero Franco; María Temblador-Pérez; Mario Beruvides (2017) An evaluation of change-point estimators for a sequence of normal observations with unknown parameters, Communications in Statistics: Simulation and Computation.</p>
+<p>Elena Cristina Villanueva-Guerra; Víctor Gustavo Tercero-Gómez; Alvaro Eduardo Cordero-Franco; William Jay Conover (2017) A control chart for variance based on squared ranks, Journal of Statistical Computation and Simulation.</p>
+<p>Alcántar-Muñoz, J. E., Barraza-Barraza, D., &amp; Cordero-Franco, A. E. (2018). A STATE-OF-THE-ART REVIEW ON RESEARCH ABOUT THE INCORPORATION OF EQUIPMENT OPERATING CONDITIONS IN CONDITION-BASED MAINTENANCE. In Proceedings of the International Annual Conference of the American Society for Engineering Management. (pp. 1-9). American Society for Engineering Management (ASEM).</p>
+<p>Samuel Nucamendi-Guillén; Francisco Angel-Bello; Iris Martínez-Salazar; Alvaro E. Cordero-Franco (2018) The cumulative capacitated vehicle routing problem: New formulations and iterated greedy algorithms, EXPERT SYSTEMS WITH APPLICATIONS.</p>
+<p>Víctor Tercero‐Gómez; Victor Aguilar‐Lleyda; Alvaro Cordero‐Franco; William Conover (2020) A distribution free CUSUM chart for joint monitoring of location and scale based on the combination of Wilcoxon and Mood statistics, QUALITY AND RELIABILITY ENGINEERING INTERNATIONAL.</p>
+</div>
+<div id="cursos" class="section level2">
+<h2>Cursos</h2>
+</div>
+<div id="conferencias-y-congresos" class="section level2">
+<h2>Conferencias y Congresos</h2>
+<p>Victor Tercero; William J. Conover (2016). Sequential normal scores in statistical process contrl. XIV Latin American Congress in Probability and Mathematical Statistics CLAPEM.</p>
+<p>(2018). 51 Congreso de la Sociedad Matemática Mexicana.</p>
+<p>(2019). 52 Congreso Nacional de la Sociedad Matemática Mexicana.</p>
+<p>Desarrollo Y Comparación De Un Algoritmo De Construcción Y Un Algoritmo Evolutivo Para La Solución. Seminario.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
